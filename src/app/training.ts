@@ -10,8 +10,13 @@ interface IWorker extends IUser {
   experience: number;
 }
 
-let appStatus: "loading" | "success" | "error";
+type AppStatus = "loading" | "success" | "error";
+
 type TextFormat = 'uppercase' | 'lowercase' | 'capitalize';
+
+type User = IUser;
+
+let appStatus: AppStatus;
 
 let textFormat: TextFormat = 'uppercase';
 
@@ -63,4 +68,4 @@ const students: IUser[] = [
   },
 ]
 
-const studentsFromKZ: IUser[] = students.filter(user => user.country === 'Kazakhstan');
+const studentsFromKZ: IUser[] = students.filter((user: IUser) => user.country === 'Kazakhstan');
