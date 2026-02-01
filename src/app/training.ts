@@ -20,7 +20,7 @@ function getSum(a: number, b: number): number {
 
 const total: number = getSum(9, 8);
 
-function returnText(text: string, format: TextFormat): string {
+function getFormattedText(text: string, format: TextFormat): string {
   if (format === 'uppercase') {
     return text.toUpperCase();
   } else if (format === 'lowercase') {
@@ -32,7 +32,7 @@ function returnText(text: string, format: TextFormat): string {
   return text;
 }
 
-function returnChar(text: string, char: string): string {
+function getTextWithoutChar(text: string, char: string): string {
   return text.replaceAll(char, '');
 }
 
