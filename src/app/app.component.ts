@@ -11,9 +11,10 @@ import './collection';
 })
 
 export class AppComponent {
+  
   companyName: string = "румтибет";
 
-  isRgbPrimaryColor(color: Color): boolean {
+  isPrimaryColor(color: Color): boolean {
     return [Color.RED, Color.GREEN, Color.BLUE].includes(color);
   }
 
@@ -36,7 +37,7 @@ export class AppComponent {
   }
 
   constructor() {
-    this.isRgbPrimaryColor(Color.BLUE);
+    this.isPrimaryColor(Color.BLUE);
     this.saveLastVisitDate();
     this.incrementVisitCounter();
   }

@@ -1,4 +1,5 @@
 export class Collection<T> {
+  
   private items: T[];
 
   constructor(initialItems: T[] = []) {
